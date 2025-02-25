@@ -7,4 +7,4 @@ Disallow: /wp-admin/
 Disallow: /login/
 
 # Sitemap
-Sitemap: https://www.limajsmotorssaht.com/sitemap.xml
+Sitemap: https://www.limajsmotors.com/sitemap.xml
