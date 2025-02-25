@@ -12,6 +12,9 @@ export default defineConfig({
     port: 3000,
     host: true, // Needed for docker
   },
+  preview: {
+    allowedHosts: ['limajsmotors.com'],
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
