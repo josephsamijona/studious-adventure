@@ -12,7 +12,7 @@ export const organizationSchema = {
     "description": "Service de transport en commun moderne, fiable et confortable au Cap-Haïtien.",
     "url": "https://www.limajsmotorssaht.com/",
     "telephone": "+50941704234",
-    "email": "limajs@gmail.com",
+    "email": "mainoffice@limajs.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Génipailler, 3e Section",

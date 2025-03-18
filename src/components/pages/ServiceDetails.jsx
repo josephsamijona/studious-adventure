@@ -222,7 +222,7 @@ const servicesData = {
   },
   'livraison': {
     title: 'Livraison et Coursier',
-    description: 'Nous transportons vos colis avec la même fiabilité que nos passagers.',
+    description: 'Nous transportons vos colis avec une fiabilité exemplaire',
     longDescription: `Notre service de livraison et coursier assure le transport rapide et sécurisé de vos 
     colis, documents et marchandises à travers Cap-Haïtien et ses environs. Que vous soyez un particulier 
     ou une entreprise, nous proposons des solutions adaptées à vos besoins, avec la même ponctualité et 

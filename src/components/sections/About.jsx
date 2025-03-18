@@ -32,6 +32,8 @@ StatItem.propTypes = {
   label: PropTypes.string.isRequired
 };
 
+
+
 const About = () => {
   // Histoire de l'entreprise pour la timeline
   const historyItems = [
@@ -83,7 +85,15 @@ const About = () => {
           </p>
           <h3 className="text-2xl font-bold mb-4 text-primary">Notre Mission</h3>
           <p className="text-gray-600 dark:text-gray-300 mb-6">
-            &quot;Connecter les gens et les communautés par le transport.&quot;
+            LIMAJS MOTORS SA vise à connecter les gens et les communautés par le transport. Elle se donne pour mission 
+            de favoriser la mobilité durable des écoliers, des universitaires et des professionnels par des systèmes 
+            de transport sécuritaires et accessibles. Ses actions se fondent d&apos;une part, sur l&apos;excellence, une façon 
+            d&apos;offrir continuellement un service de qualité optimale, rigoureux et respectueux qui valorise les parties 
+            prenantes et qui s&apos;inspire des meilleurs pratiques des systèmes de transports internationaux. D&apos;autres part, 
+            sur le réseautage, une façon d&apos;assurer la bonne liaison entre les acteurs du service tant local que régional, 
+            tant national qu&apos;international. Et enfin, la multiplication, une façon d&apos;assurer la durabilité du service 
+            dans le temps et dans l&apos;espace et garantir un effort de partenariat à l&apos;échelle mondiale. D&apos;où notre slogan : 
+            L&apos;accès et l&apos;assurance de voyager !
           </p>
 
           <Button
@@ -124,6 +134,8 @@ const About = () => {
           />
         </motion.div>
       </div>
+
+
 
       {/* Histoire de l'entreprise */}
       <div className="mb-16">

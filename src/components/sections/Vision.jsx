@@ -64,7 +64,7 @@ const Vision = () => {
     {
       icon: Compass,
       title: "Notre Vision",
-      description: "Créer un réseau de transport moderne, fiable et accessible dans le Nord d'Haïti qui transforme la façon dont les gens se déplacent au quotidien."
+      description: "connecter les gens et les communautes par le transport."
     },
     {
       icon: Target,

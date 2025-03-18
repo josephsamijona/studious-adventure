@@ -183,8 +183,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "limajs@gmail.com",
-      link: "limajs@gmail.com",
+      content: "mainoffice@limajs.com",
+      link: "mainoffice@limajs.com",
       linkType: "email"
     }
   ];

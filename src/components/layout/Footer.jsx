@@ -151,10 +151,10 @@ const Footer = () => {
               <li className="flex items-center">
                 <Mail size={20} className="mr-3 text-primary flex-shrink-0" />
                 <a 
-                  href="mailto:limajs@gmail.com" 
+                  href="mailto:mainoffice@limajs.com" 
                   className="text-gray-400 hover:text-primary transition-colors"
                 >
-                  limajs@gmail.com
+                  mainoffice@limajs.com
                 </a>
               </li>
             </ul>

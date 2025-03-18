@@ -108,7 +108,7 @@ const Services = () => {
     },
     {
       title: "Livraison",
-      description: "Nous transportons vos colis avec la même fiabilité que nos passagers.",
+      description: "Nous transportons vos colis avec une fiabilité exemplaire.",
       icon: Package,
       link: "/services/livraison"
     }
