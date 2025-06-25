@@ -86,7 +86,26 @@ const Header = () => {
 
           {/* Navigation desktop */}
           <div className="hidden md:block">
-            <Navigation />
+            <nav className="flex items-center space-x-1">
+              <Link to="/" className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
+                Accueil
+              </Link>
+              <Link to="/services" className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
+                Services
+              </Link>
+              <Link to="/a-propos" className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
+                À propos
+              </Link>
+              <Link to="/investir" className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
+                Investir
+              </Link>
+              <Link to="/rapport-activite" className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
+                Rapport d'activité
+              </Link>
+              <Link to="/contact" className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
+                Contact
+              </Link>
+            </nav>
           </div>
 
           {/* Actions */}
@@ -153,8 +172,49 @@ const Header = () => {
               </div>
 
               {/* Navigation mobile */}
-              <div className="flex-grow">
-                <Navigation isMobile={true} closeMobileMenu={closeMobileMenu} />
+              <div className="flex-grow flex flex-col">
+                <Link 
+                  to="/" 
+                  className="py-4 border-b border-gray-100 dark:border-gray-800"
+                  onClick={closeMobileMenu}
+                >
+                  Accueil
+                </Link>
+                <Link 
+                  to="/services" 
+                  className="py-4 border-b border-gray-100 dark:border-gray-800"
+                  onClick={closeMobileMenu}
+                >
+                  Services
+                </Link>
+                <Link 
+                  to="/a-propos" 
+                  className="py-4 border-b border-gray-100 dark:border-gray-800"
+                  onClick={closeMobileMenu}
+                >
+                  À propos
+                </Link>
+                <Link 
+                  to="/investir" 
+                  className="py-4 border-b border-gray-100 dark:border-gray-800"
+                  onClick={closeMobileMenu}
+                >
+                  Investir
+                </Link>
+                <Link 
+                  to="/rapport-activite" 
+                  className="py-4 border-b border-gray-100 dark:border-gray-800"
+                  onClick={closeMobileMenu}
+                >
+                  Rapport d'activité
+                </Link>
+                <Link 
+                  to="/contact" 
+                  className="py-4 border-b border-gray-100 dark:border-gray-800"
+                  onClick={closeMobileMenu}
+                >
+                  Contact
+                </Link>
               </div>
 
               {/* Actions en bas du menu mobile */}
