@@ -208,12 +208,11 @@ if (process.env.NODE_ENV === 'production') {
       // Servir les fichiers statiques
       app.use(express.static(distPath));
       
-      // Pour toutes les routes non-API, renvoyer vers l'app React
+      // IMPORTANT: Placer cette route après toutes les routes API
+      // Pour toutes les autres requêtes, renvoyer vers l'app React
       app.get('*', (req, res) => {
-        // Ne pas traiter les routes d'API
-        if (!req.path.startsWith('/api/')) {
-          res.sendFile(path.join(distPath, 'index.html'));
-        }
+        console.log(`Redirection vers React pour: ${req.path}`);
+        res.sendFile(path.join(distPath, 'index.html'));
       });
     } else {
       console.error(`❌ ERREUR: Dossier dist non trouvé ou n'est pas un répertoire: ${distPath}`);
