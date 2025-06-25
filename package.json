@@ -12,13 +12,15 @@
     "dev:backend": "nodemon server/server.js",
     "build": "vite build",
     "start": "npm run build && node server/server.js",
+    "start:prod": "NODE_ENV=production node server/server.js",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "railway": "npm run build && cross-env NODE_ENV=production node server/server.js"
   },
   "dependencies": {
     "@hookform/resolvers": "3.10.0",
-    "concurrently": "^9.2.0",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "framer-motion": "11.18.2",
@@ -33,7 +35,6 @@
     "react-router-dom": "6.29.0",
     "react-scroll": "1.9.3",
     "rimraf": "^6.0.1",
-    "siteweblimajs": "file:",
     "swiper": "11.2.4"
   },
   "devDependencies": {
@@ -44,6 +45,7 @@
     "@types/react-dom": "18.3.5",
     "@vitejs/plugin-react": "4.3.4",
     "autoprefixer": "10.4.20",
+    "concurrently": "^9.2.0",
     "eslint": "9.21.0",
     "eslint-plugin-react": "7.37.4",
     "eslint-plugin-react-hooks": "5.1.0",

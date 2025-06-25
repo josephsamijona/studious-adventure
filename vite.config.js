@@ -21,7 +21,16 @@ export default defineConfig({
     },
   },
   preview: {
-    allowedHosts: ['limajsmotors.com'],
+    // Pas de restriction d'hôtes
+    port: process.env.PORT || 4173,
+    proxy: {
+      // Rediriger les requêtes /api vers le serveur Express en production
+      '/api': {
+        target: process.env.API_URL || 'http://localhost:3001',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
   },
   resolve: {
     alias: {
