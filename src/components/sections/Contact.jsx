@@ -10,6 +10,8 @@ import Button from '../ui/Button';
 
 // Utilitaires
 import { isValidEmail, isValidHaitianPhone } from '../../utils/helpers';
+// Import du hook pour le service d'email
+import { useEmailService } from '../../hooks/useEmailService';
 
 const ContactInfo = ({ icon: Icon, title, content, link, linkType }) => {
   let linkProps = {};
@@ -63,6 +65,9 @@ ContactInfo.propTypes = {
 };
 
 const Contact = () => {
+  // Utilisation du hook pour le service d'email
+  const { sendEmail } = useEmailService();
+  
   // État du formulaire
   const [formData, setFormData] = useState({
     name: '',
@@ -142,8 +147,8 @@ const Contact = () => {
     setSubmitError(null);
     
     try {
-      // Simuler un appel API (À remplacer par votre véritable appel API)
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Envoyer le message via l'API
+      await sendEmail(formData, true); // Le second paramètre true active l'envoi d'un email de confirmation
       
       // Succès
       setIsSubmitted(true);
@@ -157,7 +162,8 @@ const Contact = () => {
       });
     } catch (error) {
       // Gérer l'erreur
-      setSubmitError("Une erreur s'est produite. Veuillez réessayer plus tard.");
+      console.error('Erreur lors de l\'envoi du message:', error);
+      setSubmitError(error.message || "Une erreur s'est produite. Veuillez réessayer plus tard.");
     } finally {
       // Terminer la soumission
       setIsSubmitting(false);

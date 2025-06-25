@@ -7,15 +7,23 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "vite",
+    "dev:backend": "nodemon server/server.js",
     "build": "vite build",
+    "start": "node server/server.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@hookform/resolvers": "3.10.0",
+    "concurrently": "^9.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
     "framer-motion": "11.18.2",
     "lucide-react": "0.476.0",
+    "nodemailer": "^7.0.3",
     "prop-types": "15.8.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -24,12 +32,14 @@
     "react-icons": "5.5.0",
     "react-router-dom": "6.29.0",
     "react-scroll": "1.9.3",
+    "rimraf": "^6.0.1",
     "siteweblimajs": "file:",
     "swiper": "11.2.4"
   },
   "devDependencies": {
     "@eslint/core": "0.9.1",
     "@eslint/js": "9.21.0",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
     "@vitejs/plugin-react": "4.3.4",
@@ -40,6 +50,7 @@
     "eslint-plugin-react-refresh": "0.4.19",
     "globals": "15.15.0",
     "husky": "9.1.7",
+    "nodemon": "^3.1.10",
     "postcss": "8.5.3",
     "tailwindcss": "3.4.17",
     "vite": "5.4.14"

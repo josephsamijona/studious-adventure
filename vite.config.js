@@ -11,6 +11,14 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true, // Needed for docker
+    proxy: {
+      // Rediriger les requêtes /api vers le serveur Express en développement
+      '/api': {
+        target: 'http://localhost:3001',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
   },
   preview: {
     allowedHosts: ['limajsmotors.com'],
